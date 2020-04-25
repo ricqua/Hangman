@@ -67,6 +67,7 @@ header {
         position: relative;
         flex-grow: 1;
         margin: 3vh 3vw 5vh 10vw;
+        box-shadow: 0 0 2vh black;
     }
 
         .hangingDude {
@@ -102,19 +103,23 @@ header {
     font-weight: bold;
     letter-spacing: 20px;
     display: inline-block;
-
+    height: 6vh;
 }
+
     .keyboardLetter:hover {
         color: rgb(218, 0, 218);
         cursor: pointer;
         transition: all 0.3s ease;
         text-shadow: 0 0 10px white;
+        animation: jiggle 0.3s infinite;
     }
 
     .keyboardLetter:disabled {
         color: transparent;
         text-shadow: 0 0 0;
         cursor: auto;
+        opacity: 0;
+        
     }
 
 .characterArea {
@@ -137,7 +142,6 @@ header {
 }
 
     .characterArea > div > img:hover{
-        animation: jiggle 0.3s infinite;
         opacity: 1;
     }
 
@@ -161,11 +165,11 @@ footer {
 
 @keyframes jiggle {
     0% {
-        transform: rotate(-5deg);
+        transform: rotate(-10deg);
     }
 
     50% {
-        transform: rotate(5deg);
+        transform: rotate(10deg);
     }
 }
 
