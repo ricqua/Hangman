@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700&display=swap');     /*connect this "Asap" font front fonts.google.com to this style sheet*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Asap, sans-serif;
+}
+
+body {
+    background-color: darkslategray;
+    height:100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    /*background-color: green;*/
+    height: 5vh;
+    margin:1vh 0 1vh 0;
+    position: absolute; 
+    left: 10vw;
+}
+
+    header > p{
+        color: white;
+        font-size: 3.5vh;
+        margin-right: 1vw;
+        font-family: Asap, sans-serif;
+    }
+
+    header button {
+        background-color: darkslategray;
+        color: white;
+        border: 0;
+        font-size: 3vh;
+        cursor: pointer;
+        margin: 0 1vw 0 1vw;
+    }
+
+        header button:hover {
+            color: #ff6a00;
+            /*font-size: 3vh;*/
+        }
+
+.mainGameArea {
+    position: absolute;
+    top: 5vh;
+    bottom: 40vh;
+    left: 0;
+    right: 40vw;
+    /*background-color: darkslateblue;*/
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-direction: row;
+}
+
+    .mainGameArea > div {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        border: 4vh solid #56342aff;
+        background-color: #333333ff;
+        position: relative;
+        flex-grow: 1;
+        margin: 3vh 3vw 5vh 10vw;
+    }
+
+        .hangingDude {
+            height: 30vh;
+            margin: 1vh;
+        }
+
+.keyboard {
+    /* background-color: darkolivegreen; */
+    position: absolute;
+    top: 5vh;
+    bottom: 40vh;
+    left: 60vw;
+    right: 3vw;
+    margin: 3vh 3vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-family: Asap, sans-serif;
+    color: white;
+    font-size: 6vh;
+    font-weight: bold;
+    letter-spacing: 20px;
+}
+
+.keyboardLetter {
+    color: white;
+    border: none;
+    background: Transparent;
+    /* border: 1px solid black; */
+    font-size: 6vh;
+    font-weight: bold;
+    letter-spacing: 20px;
+    display: inline-block;
+
+}
+    .keyboardLetter:hover {
+        color: rgb(218, 0, 218);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-shadow: 0 0 10px white;
+    }
+
+    .keyboardLetter:disabled {
+        color: transparent;
+        text-shadow: 0 0 0;
+        cursor: auto;
+    }
+
+.characterArea {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 20vh;
+    top: 60vh;
+    left: 10vw;
+    right: 10vw;
+    text-align: center;
+    font-size: 2vh;
+    padding-bottom: 2vh;
+    font-family: Asap, sans-serif;
+    color: white;
+}
+
+.characterArea > div > img {
+    height: 13vh;
+}
+
+    .characterArea > div > img:hover{
+        animation: jiggle 0.3s infinite;
+        opacity: 1;
+    }
+
+footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    height: 20vh;
+    width: 100vw;
+    background-color: white;
+    border-top: 3px solid black;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 4vh 0;
+    color: black;
+    font-size: 10vh;
+    font-family: monospace;
+    border-bottom: 1vh solid black;
+}
+
+@keyframes jiggle {
+    0% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
