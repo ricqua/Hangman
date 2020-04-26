@@ -65,15 +65,22 @@ document.getElementById('hangingDude').src = 'images/hangingDude' + mistakes + '
 
 function checkIfGameWon() {
   if (wordStatus === answer) {
-    document.getElementById('keyboard').innerHTML = 'You Won!';
+    // document.getElementById('keyboard').innerHTML = 'You Won!';
+    document.getElementById('keyboard').innerHTML = `
+    <div class="resultsScreen">
+      <p>YOU WON</p>
+      <button onclick="reset()">Next</button>
+    </div>`};
   }
-}
 
 function checkIfGameLost() {
   if (mistakes === maxWrong) {
     document.getElementById('wordSpotlight').innerHTML = answer;
-    document.getElementById('keyboard').innerHTML = 'You Lost!';
-  }
+    document.getElementById('keyboard').innerHTML = `
+    <div class="resultsScreen">
+      <p>YOU LOST</p>
+      <button onclick="reset()">Next</button>
+    </div>`};
 }
 
 function guessedWord() {
@@ -88,8 +95,7 @@ function guessedWord() {
 function reset() {
   mistakes = 0;
   guessed = [];
-  document.getElementById('hangingDude').src = './hangingDude0.png';
-
+  document.getElementById('hangingDude').src = './images/hangingDude0.png';
   randomWord();
   guessedWord();
   // updateMistakes();

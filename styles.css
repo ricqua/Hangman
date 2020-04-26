@@ -73,10 +73,13 @@ header {
         .hangingDude {
             height: 30vh;
             margin: 1vh;
+            -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
         }
 
 .keyboard {
-    /* background-color: darkolivegreen; */
     position: absolute;
     top: 5vh;
     bottom: 40vh;
@@ -121,6 +124,25 @@ header {
         opacity: 0;
         
     }
+
+.resultsScreen{
+        text-align: center;
+    }
+
+
+.resultsScreen > button{
+    color: black;
+    font-size: 3.5vh;
+    background: green;
+    border-radius: 2vh;
+    padding: 1vh 2vw;
+}
+
+.resultsScreen > button:hover {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px white;
+}
 
 .characterArea {
     display: flex;
