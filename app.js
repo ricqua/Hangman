@@ -3,7 +3,7 @@ let maxWrong = 10;
 let mistakes = 0;
 let guessed = [];
 let wordStatus = null;
-var wordList = wordList1.colours;   //change the word list here
+var wordList = wordList2;   //change the word list here
 
 
 function randomWord() {
